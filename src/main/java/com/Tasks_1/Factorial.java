@@ -15,7 +15,6 @@ public class Factorial {
             }
            System.out.println(value.length() );
           System.out.println("Result:"+ result );
-
     }
 
 }
