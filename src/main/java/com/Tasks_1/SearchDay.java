@@ -12,7 +12,6 @@ public class SearchDay {
         System.out.println("Enter please your date: MM/dd/yyyy");
         String value = in.nextLine();
         SimpleDateFormat date= new SimpleDateFormat("MM/dd/yyyy");
-
         date.setLenient(false); // делает проверку на введенный год
         Date date1 = date.parse(value);
         SimpleDateFormat a = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH);
@@ -23,8 +22,10 @@ public class SearchDay {
         Calendar calendar = new GregorianCalendar();
         int month = calendar.get(Calendar.MONTH);
         int year =calendar.get(Calendar.YEAR);
-        System.out.println(month);
-        System.out.println(year);
+        int day = calendar.getFirstDayOfWeek();
+     //   System.out.println(month);
+     //   System.out.println(year);
+    //    System.out.println(day);
 
 }
 
