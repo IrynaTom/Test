@@ -1,46 +1,81 @@
 package com.Tasks_1;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Scanner;
 
 public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter please your date: MM/dd/yyyy");
-        String value = in.nextLine();
-        SimpleDateFormat date= new SimpleDateFormat("MM/dd/yyyy");
-        date.setLenient(false); // делает проверку на введенный год
-        Date date1 = date.parse(value);
-        SimpleDateFormat a = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH);
-        String userDate= a.format(date1);
-        System.out.println(userDate.toUpperCase());
+        Scanner inDay = new Scanner(System.in);
+        System.out.println("Enter please your day");
+        String day = inDay.nextLine();
+
+        Scanner inMonth = new Scanner(System.in);
+        System.out.println("Enter please your month");
+        String month1 = inMonth.nextLine();
+        int month = Integer.parseInt(month1);
+
+        Scanner inNumber = new Scanner(System.in);
+        System.out.println("Enter please your number");
+        String number1 = inNumber.nextLine();
+        int number = Integer.parseInt(number1);
+
+        Scanner inYear = new Scanner(System.in);
+        System.out.println("Enter please your year");
+        String year1 = inYear.nextLine();
+        try{
+            boolean year = Boolean.parseBoolean(year1);
+        }catch (NumberFormatException e) {
+            System.err.println("Неверный формат строки!");
+        }
 
 
-        Calendar calendar = new GregorianCalendar();
-        int month = calendar.get(Calendar.MONTH);
-        int year =calendar.get(Calendar.YEAR);
-        int day = calendar.getFirstDayOfWeek();
-     //   System.out.println(month);
-     //   System.out.println(year);
-    //    System.out.println(day);
+    }
+
+    public enum DayOfWeek {
+        SUNDAY,
+        MONDAY ,
+        TUESDAY ,
+        WEDNESDAY,
+        THURSDAY ,
+        FRIDAY,
+        SATURDAY;
+    }
+
+  public enum Month {
+      January(31),
+      February(28,29),
+      March(31),
+      April(30),
+      May(31),
+      June(30),
+      July(31),
+      August(31),
+      September(30),
+      October(31),
+      November(30),
+      December(31);
+
+      private int leapDays;
+      private int lowDays;
+
+      Month(int days) {
+          this(days, days);
+      }
+
+      Month(int leapDays, int lowDays) {
+          this.leapDays = leapDays;
+          this.lowDays = lowDays;
+      }
+  }
+
+  //public void getDayOfWeek(DayOfWeek, Month, int date, boolean year){
+
+ // }
+
+
 
 }
 
 
-
- /*public static enterDate (){
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter please your date: MM/dd/yyyy");
-        String value = in.nextLine();
-        SimpleDateFormat date= new SimpleDateFormat("MM/dd/yyyy");
-        date.setLenient(false); // делает проверку на введенный год
-        Date date1 = date.parse(value);
-        SimpleDateFormat a = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH);
-      //  System.out.println(a.format(date1).toUpperCase());
-        return (a.format(date1));
-    }*/
-
-}
