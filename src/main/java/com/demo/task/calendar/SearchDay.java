@@ -34,37 +34,25 @@ public class SearchDay {
         }catch (NumberFormatException e) {
             System.err.println("Неверный формат строки!");
         }*/
-      // for (int i=0; i< Month.MAY.ordinal(); i++) {
-
-     //       System.out.println(Month.values()[i].lowDays);
-     //       i += Month.values()[i].lowDays;
-     //   }
 
   //     Month.JANUARY.getDaysCount(true);
        getCountOfDay("MAY", 7, false);
+        System.out.println(Day.values()[1+10]);
 
 
         }
 
 
     public static int getCountOfDay (String monthUser, int day, boolean year){
-        int k=0;
+        int numberDays=0;
 
         for (int i=0; i< Month.valueOf(monthUser).ordinal(); ++i){
-            k += Month.values()[i].getDaysCount(year);
+            numberDays += Month.values()[i].getDaysCount(year);
         }
-        int CountDay= k+day;
+        int CountDay= numberDays+day;
         System.out.println(CountDay);
-        return k;
+        return numberDays;
     }
 
-
-
-
-   /* public static getDayOfWeek(Day d, Month m, int date, boolean year) {
-
-        for (Day day : Day.values()) {
-
-        }*/
     }
 
