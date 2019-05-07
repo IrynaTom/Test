@@ -1,11 +1,16 @@
 package com.demo.task.calendar;
 
-import java.awt.event.MouseAdapter;
+import com.sun.xml.internal.bind.v2.model.core.MaybeElement;
+
 import java.text.ParseException;
+
 
 public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
+
+
+
 
       /*  Scanner inDay = new Scanner(System.in);
         System.out.println("Enter please your day");
@@ -29,60 +34,37 @@ public class SearchDay {
         }catch (NumberFormatException e) {
             System.err.println("Неверный формат строки!");
         }*/
+      // for (int i=0; i< Month.MAY.ordinal(); i++) {
+
+     //       System.out.println(Month.values()[i].lowDays);
+     //       i += Month.values()[i].lowDays;
+     //   }
+
+  //     Month.JANUARY.getDaysCount(true);
+       getCountOfDay("MAY", 7, false);
 
 
-    }
-
-    public enum DayOfWeek {
-        SUNDAY,
-        MONDAY,
-        TUESDAY,
-        WEDNESDAY,
-        THURSDAY,
-        FRIDAY,
-        SATURDAY;
-    }
-
-    public enum Month {
-        January(31),
-        February(28, 29),
-        March(31),
-        April(30),
-        May(31),
-        June(30),
-        July(31),
-        August(31),
-        September(30),
-        October(31),
-        November(30),
-        December(31);
-
-        private int leapDays;
-        private int lowDays;
-
-        Month(int days) {
-            this(days, days);
         }
 
-        Month(int leapDays, int lowDays) {
-            this.leapDays = leapDays;
-            this.lowDays = lowDays;
+
+    public static int getCountOfDay (String monthUser, int day, boolean year){
+        int k=0;
+
+        for (int i=0; i< Month.valueOf(monthUser).ordinal(); ++i){
+            k += Month.values()[i].getDaysCount(year);
         }
+        int CountDay= k+day;
+        System.out.println(CountDay);
+        return k;
     }
 
-    public DayOfWeek getDayOfWeek(DayOfWeek, Month, int date, boolean year) {
-    int finalDay;
 
-        if (year = true) {
-            int fab = Month.February.lowDays;
-        } else {
-            int fab = Month.February.leapDays;
-        }
-        for (int i = 0; i <= Month; i++) {
-        finalDay= ++ finalDay;
-        }
-        finalDay = finalDay+date;
+
+
+   /* public static getDayOfWeek(Day d, Month m, int date, boolean year) {
+
+        for (Day day : Day.values()) {
+
+        }*/
     }
-
-}
 
