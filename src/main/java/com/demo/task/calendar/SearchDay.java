@@ -9,8 +9,6 @@ public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
 
-
-
         System.out.println( getCountOfDay(Day.TUESDAY, Month.MAY, 8,false));
     }
 
