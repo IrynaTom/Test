@@ -9,12 +9,12 @@ public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
 
-        System.out.println(getCountOfDay(Day.WEDNESDAY, Month.DECEMBER, 31,true));
+        System.out.println(getDayOfWeek(Day.WEDNESDAY, Month.DECEMBER, 31,true));
     }
 
 
 
-    public static Day  getCountOfDay(Day newYearDay, Month month, int dayOfMonth, boolean isLeapYear){
+    public static Day  getDayOfWeek(Day newYearDay, Month month, int dayOfMonth, boolean isLeapYear){
 
         int numberDays = 0;
 

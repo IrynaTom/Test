@@ -26,6 +26,10 @@ public enum Month {
         this.lowDays = lowDays;
     }
    public int getDaysCount (boolean isLeapYear){
+        try {
+            isLeapYear ?  leapDays:  lowDays;
+        }
+
    return isLeapYear ?  leapDays:  lowDays;
 }
 
