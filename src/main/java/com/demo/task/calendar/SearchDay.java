@@ -2,6 +2,7 @@ package com.demo.task.calendar;
 
 import com.sun.xml.internal.bind.v2.model.core.MaybeElement;
 
+import java.awt.event.MouseAdapter;
 import java.text.ParseException;
 
 
@@ -9,7 +10,7 @@ public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
 
-        System.out.println(getDayOfWeek(Day.WEDNESDAY, Month.MAY, 8, true));
+        System.out.println(getDayOfWeek(Day.TUESDAY, Month.MAY, 8, false));
 
 
     }
@@ -18,9 +19,9 @@ public class SearchDay {
     public static Day getDayOfWeek(Day newYearDay, Month month, int dayOfMonth, boolean isLeapYear) {
 
 
-     if (dayOfMonth < 1 || dayOfMonth <= month.getDaysCount(isLeapYear) ){
+     if (dayOfMonth <= 1 | dayOfMonth >= month.getDaysCount(isLeapYear) ){
          System.out.println("Incorrect date");
-
+         System.exit(0);
      }
 
 
