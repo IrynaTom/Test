@@ -35,15 +35,16 @@ public class SearchDay {
             System.err.println("Неверный формат строки!");
         }*/
 
-  //     Month.JANUARY.getDaysCount(true);
-       getCountOfDay("MAY", 7, false);
-        System.out.println(Day.values()[1+10]);
+
+       getCountOfDay("MAY", 7, false, "MONDAY");
+
+      //  System.out.println(Day.valueOf(WDay).ordinal());
 
 
         }
 
 
-    public static int getCountOfDay (String monthUser, int day, boolean year){
+    public static int getCountOfDay (String monthUser, int day, boolean year, String Wday){
         int numberDays=0;
 
         for (int i=0; i< Month.valueOf(monthUser).ordinal(); ++i){
@@ -51,6 +52,10 @@ public class SearchDay {
         }
         int CountDay= numberDays+day;
         System.out.println(CountDay);
+
+        int allDays=  numberDays - Day.valueOf(Wday).ordinal();
+
+        System.out.println(allDays);
         return numberDays;
     }
 
