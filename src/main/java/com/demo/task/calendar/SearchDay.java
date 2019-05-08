@@ -9,7 +9,7 @@ public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
 
-        System.out.println( getCountOfDay(Day.TUESDAY, Month.MAY, 8,false));
+        System.out.println( getCountOfDay(Day.WEDNESDAY, Month.DECEMBER, 31,true));
     }
 
 
@@ -25,7 +25,7 @@ public class SearchDay {
         }
         numberDays += dayOfMonth;
 
-        numberDays += newYearDay.ordinal();
+        numberDays += newYearDay.ordinal()-1;
 
         numberDays %= 7;
 
