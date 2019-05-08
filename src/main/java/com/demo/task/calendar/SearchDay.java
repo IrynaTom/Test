@@ -36,31 +36,28 @@ public class SearchDay {
         }*/
 
 
-       getCountOfDay("MAY", 7, false, "MONDAY");
+        getCountOfDay("MAY", 7, false, "MONDAY");
 
-      //  System.out.println(Day.valueOf(WDay).ordinal());
-
-
-        }
+        //  System.out.println(Day.valueOf(WDay).ordinal());
 
 
-    public static int getCountOfDay (String monthUser, int day, boolean year, String Wday){
-        int numberDays=0;
+    }
 
-        for (int i=0; i< Month.valueOf(monthUser).ordinal(); ++i){
+
+    public static int getCountOfDay(String monthUser, int day, boolean year, String Wday) {
+        int numberDays = 0;
+
+        for (int i = 0; i < Month.valueOf(monthUser).ordinal(); ++i) {
             numberDays += Month.values()[i].getDaysCount(year);
         }
-        int CountDay= numberDays+day;
+        int CountDay = numberDays + day;
         System.out.println(CountDay);
 
-        int allDays=  numberDays - Day.valueOf(Wday).ordinal();
+        int allDays = numberDays - Day.valueOf(Wday).ordinal();
 
         System.out.println(allDays);
         return numberDays;
     }
 
-
-
-
-    }
+}
 
