@@ -9,7 +9,7 @@ public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
 
-        System.out.println( getCountOfDay(Day.WEDNESDAY, Month.DECEMBER, 31,true));
+        System.out.println(getCountOfDay(Day.WEDNESDAY, Month.DECEMBER, 31,true));
     }
 
 
