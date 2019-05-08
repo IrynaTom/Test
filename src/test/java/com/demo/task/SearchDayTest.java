@@ -28,6 +28,10 @@ public class SearchDayTest {
     assertEquals(Day.TUESDAY,day);
 }
 
-
+@Test
+   public void incorrectdayOfMonth() {
+    Day day = SearchDay.getDayOfWeek(Day.TUESDAY, Month.JANUARY, 33, false);
+    Assert.fail("Incorrect date");
+}
 }
 
