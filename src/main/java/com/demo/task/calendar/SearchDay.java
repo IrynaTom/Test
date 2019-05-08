@@ -9,15 +9,22 @@ public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
 
-        System.out.println(getDayOfWeek(Day.WEDNESDAY, Month.DECEMBER, 31,true));
+        System.out.println(getDayOfWeek(Day.WEDNESDAY, Month.MAY, 8, true));
+
+
     }
 
 
+    public static Day getDayOfWeek(Day newYearDay, Month month, int dayOfMonth, boolean isLeapYear) {
 
-    public static Day  getDayOfWeek(Day newYearDay, Month month, int dayOfMonth, boolean isLeapYear){
+
+     if (dayOfMonth < 1 || dayOfMonth <= month.getDaysCount(isLeapYear) ){
+         System.out.println("Incorrect date");
+
+     }
+
 
         int numberDays = 0;
-
         for (int i = 0; i < month.ordinal(); ++i) {
 
             numberDays += Month.values()[i].getDaysCount(isLeapYear);
@@ -25,14 +32,13 @@ public class SearchDay {
         }
         numberDays += dayOfMonth;
 
-        numberDays += newYearDay.ordinal()-1;
+        numberDays += newYearDay.ordinal() - 1;
 
         numberDays %= 7;
 
-        return  Day.values()[numberDays];
+        return Day.values()[numberDays];
 
     }
-
 
 
 }
