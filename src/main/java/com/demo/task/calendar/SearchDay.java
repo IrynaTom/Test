@@ -19,9 +19,10 @@ public class SearchDay {
     public static Day getDayOfWeek(Day newYearDay, Month month, int dayOfMonth, boolean isLeapYear) {
 
 
-     if (dayOfMonth <= 1 | dayOfMonth >= month.getDaysCount(isLeapYear) ){
+     if (dayOfMonth < 1 | dayOfMonth > month.getDaysCount(isLeapYear) ){
          System.out.println("Incorrect date");
          System.exit(0);
+
      }
 
 
