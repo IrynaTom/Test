@@ -10,7 +10,7 @@ public class SearchDay {
 
     public static void main(String[] args) throws ParseException {
 
-        System.out.println(getDayOfWeek(Day.TUESDAY, Month.MAY, 8, false));
+        System.out.println(getDayOfWeek(Day.TUESDAY, Month.MAY, 32, false));
 
 
     }
@@ -20,8 +20,9 @@ public class SearchDay {
 
 
      if (dayOfMonth < 1 | dayOfMonth > month.getDaysCount(isLeapYear) ){
-         System.out.println("Incorrect date");
-         System.exit(0);
+       //  System.out.println("Incorrect date");
+        // System.exit(0);
+         throw new IllegalArgumentException("Incorrect date");
 
      }
 
