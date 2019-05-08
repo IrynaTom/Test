@@ -40,7 +40,6 @@ public class SearchDay {
 
         //  System.out.println(Day.valueOf(WDay).ordinal());
 
-
     }
 
 
