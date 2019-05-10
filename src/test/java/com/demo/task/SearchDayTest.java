@@ -28,10 +28,21 @@ public class SearchDayTest {
     assertEquals(Day.TUESDAY,day);
 }
 
-@Test( expected = IllegalArgumentException.class)
-   public void incorrectdayOfMonth() {
+@Test(expected = IllegalArgumentException.class)
+   public void incorrectdayMOfMonth() {
     Day day = SearchDay.getDayOfWeek(Day.TUESDAY, Month.JANUARY, 33, false);
-
 }
+
+@Test
+    public void incorrectdayLOfMonth() {
+    try{
+        SearchDay.getDayOfWeek(Day.TUESDAY, Month.JANUARY, 0, false);
+        fail();
+    }
+    catch (IllegalArgumentException e) {
+    }
+}
+
+
 }
 

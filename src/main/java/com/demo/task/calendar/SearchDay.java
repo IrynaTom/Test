@@ -20,8 +20,6 @@ public class SearchDay {
 
 
      if (dayOfMonth < 1 | dayOfMonth > month.getDaysCount(isLeapYear) ){
-       //  System.out.println("Incorrect date");
-        // System.exit(0);
          throw new IllegalArgumentException("Incorrect date");
 
      }
