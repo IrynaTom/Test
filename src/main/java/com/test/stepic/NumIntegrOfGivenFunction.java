@@ -1,11 +1,15 @@
 package com.test.stepic;
 import com.demo.task.calendar.Month;
+import com.sun.org.apache.xerces.internal.impl.xpath.XPath;
 
 import java.util.function.DoubleUnaryOperator;
 
 public class NumIntegrOfGivenFunction {
     public static void main(String[] args) {
-        System.out.println(integrate(x->2, 0, 10));
+        System.out.println(integrate(x -> 1, 0, 10));//10.0
+        System.out.println(integrate(x -> x + 2, 0, 10));//70.0
+        System.out.println(integrate( x -> Math.sin(x) / x , 1, 5));//0.603848
+
     }
 
 
@@ -14,14 +18,13 @@ public class NumIntegrOfGivenFunction {
         double step = (b-a) / gridStep; //шаг сетки
         double res=0;
 
-        for(int i=0; i < gridStep; i++) {
-            res += f.applyAsDouble(a+i*step);
+        for(int i=0; i <= step-1; i++) {
+            res +=  f.applyAsDouble(step*(a+i));
         }
 
-        System.out.println(res);
-        res *= step;
-        System.out.println(res);
+        res *= gridStep ;
        return res;
+
     }
 
 }
