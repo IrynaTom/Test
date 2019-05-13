@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class AsciiCharSequence implements CharSequence {
 
 
+    private byte[] Array1;
 
     public static void main(String[] args) {
         byte[] Array2 = {72, 101, 108, 108, 111, 33};
@@ -23,11 +24,12 @@ public class AsciiCharSequence implements CharSequence {
 
 
 
-    private  byte[] Array1;
+
 
     public AsciiCharSequence(byte[] inputArray){
 
-        this.Array1=inputArray;
+        this.Array1=new byte[inputArray.length];
+        for(int i = 0; i < inputArray.length; i++) { Array1[i] = inputArray[i]; }
     }
 
     @Override
@@ -51,13 +53,7 @@ public class AsciiCharSequence implements CharSequence {
 
     @Override
     public String toString(){
-
-        StringBuilder result = new StringBuilder(Array1.length);
-        for(int i = 0; i < Array1.length; i++ ){
-            result.append((char)Array1[i]);
-        }
-
-        return result.toString();
+        return new String(Array1);
     }
 
 }
