@@ -4,10 +4,9 @@ public final class ComplexNumber {
     public static void main(String[] args) {
         ComplexNumber a = new ComplexNumber(1, 1);
         ComplexNumber b = new ComplexNumber(1, 1);
-        a.equals(b);
+        System.out.println(a.equals(b));
+        System.out.println( a.hashCode()==b.hashCode());
 
-      a.hashCode();
-       b.hashCode();
 
 
 
@@ -30,13 +29,25 @@ public final class ComplexNumber {
         return im;
     }
 
-    public boolean equals(){
-return true;
+    public boolean equals(Object obj){
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        ComplexNumber other = (ComplexNumber) obj;
+        if (re != other.im)
+            return false;
+        if (im != other.re)
+            return false;
+        return true;
     }
 
     public int  hashCode(){
-        int result;
-
-        return result;
+         int res;
+         res = Double.hashCode(re);
+         res = Double.hashCode(im);
+         return res;
     }
 }
