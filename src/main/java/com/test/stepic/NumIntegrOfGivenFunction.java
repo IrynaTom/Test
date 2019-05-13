@@ -14,12 +14,12 @@ public class NumIntegrOfGivenFunction {
 
 
     public static double integrate(DoubleUnaryOperator f, double a, double b) {
-        double gridStep = Math.pow(10,-6);
+        double gridStep = Math.pow(10,-7);
         double step = (b-a) / gridStep; //шаг сетки
         double res=0;
 
         for(int i=0; i <= step-1; i++) {
-            res +=  f.applyAsDouble(step*(a+i));
+            res +=   f.applyAsDouble(a+((i+0.5)*gridStep));
         }
 
         res *= gridStep ;
