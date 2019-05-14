@@ -2,33 +2,28 @@ package com.test.stepic.filteringComments;
 
 public class TooLongTextAnalyzer extends  KeywordAnalyzer {
     private int maxLength;
+    private String[] keywords;
 
-    public TooLongTextAnalyzer(int maxLength){
-        this.maxLength=maxLength;
+    public TooLongTextAnalyzer(int length){
+        this.maxLength=length;
     }
 
     @Override
     protected String[] getKeywords() {
-        return new String[0];
+        return keywords;
     }
 
     @Override
     protected Label getLabel() {
-        return null;
+        return Label.TOO_LONG;
     }
 
+    @Override
     public Label processText(String text) {
-        if(text.length()>maxLength){
+        if (text.length() > maxLength)
             return Label.TOO_LONG;
-        }
-        return  Label.OK;
-    }
-
-    public Label checkLabels(TextAnalyzer[] analyzers, String text) {
-        for (int i = 0; i < analyzers.length; i++)
-            if (analyzers[i].processText(text) != Label.OK)
-                return analyzers[i].processText(text);
-        return Label.OK;
+        else
+            return Label.OK;
     }
 
 }

@@ -1,5 +1,7 @@
 package com.test;
 
+import com.test.stepic.filteringComments.TextAnalyzer;
+
 public class Main {
     public static void main(String[] args) {
         int arrayLength = args.length;
@@ -10,4 +12,5 @@ public class Main {
             System.out.println("Param:"+ (i+1)+ " "+ num);
         }
     }
+
 }
