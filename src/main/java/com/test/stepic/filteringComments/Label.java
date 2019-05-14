@@ -1,6 +1,6 @@
 package com.test.stepic.filteringComments;
 
-public enum Label {
+/*public enum Label {
     SPAM,
     NEGATIVE_TEXT,
     TOO_LONG,
@@ -10,13 +10,13 @@ public enum Label {
     private int MaxLength;
 
 
-    Label(String symbols){
-        this.symbols = symbols;
-    }
+ Label(String symbols){
+     this.symbols = symbols;
+   }
 
-    Label(int MaxLength){
-        this.MaxLength= MaxLength;
-    }
+  Label(int MaxLength){
+       this.MaxLength= MaxLength;
+  }
 
 
-}
+}*/
