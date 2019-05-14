@@ -1,13 +1,17 @@
 package com.test.stepic.filteringComments;
 
 public class NegativeTextAnalyzer extends  KeywordAnalyzer {
+
+    private final String[] KEYWORDS = {":(", "=(", ":|"};
+
+
     @Override
     protected String[] getKeywords() {
-        return new String[0];
+        return KEYWORDS;
     }
 
     @Override
     protected Label getLabel() {
-        return null;
+        return Label.NEGATIVE_TEXT;
     }
 }
