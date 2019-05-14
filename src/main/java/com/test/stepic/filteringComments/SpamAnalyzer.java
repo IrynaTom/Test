@@ -1,6 +1,6 @@
 package com.test.stepic.filteringComments;
 
-public class SpamAnalyzer extends  KeywordAnalyzer{
+public class SpamAnalyzer extends  KeywordAnalyzer {
 
     private String[] keywords;
 

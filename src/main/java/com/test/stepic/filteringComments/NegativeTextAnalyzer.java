@@ -1,6 +1,6 @@
 package com.test.stepic.filteringComments;
 
-public class NegativeTextAnalyzer extends  KeywordAnalyzer {
+public class NegativeTextAnalyzer extends  KeywordAnalyzer  {
 
     private final String[] KEYWORDS = {":(", "=(", ":|"};
 
