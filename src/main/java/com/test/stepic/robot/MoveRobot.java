@@ -4,7 +4,7 @@ public class MoveRobot {
 
     public static void main(String[] args) {
       //  moveRobot(new Robot(), 3, 0);
-        moveRobot(new Robot(), -2, 0);
+    //    moveRobot(new Robot(), -2, 0);
     }
 
     public static void moveRobot(Robot robot, int toX, int toY) {
