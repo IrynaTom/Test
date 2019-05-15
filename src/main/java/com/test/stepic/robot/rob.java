@@ -1,6 +1,6 @@
 package com.test.stepic.robot;
 
-public class rob {
+/*public class rob {
 
     public static void moveRobot(RobotConnectionManager robotConnectionManager, int toX, int toY) {
 
@@ -19,3 +19,4 @@ public class rob {
         }
     }
 }
+*/
