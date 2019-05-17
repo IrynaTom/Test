@@ -5,7 +5,7 @@ import java.io.InputStream;
 
 public class rob {
     public static void main(String[] args) {
-        moveRobot(RobotConnection, 0, 3);
+       // moveRobot(RobotConnection, 0, 3);
 
     }
 
