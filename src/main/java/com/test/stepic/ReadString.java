@@ -1,24 +1,25 @@
 package com.test.stepic;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.Charset;
 
 public class ReadString {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(new byte[]{48, 49, 50, 51});
+        String str = readAsString(inputStream, Charset.forName("ASCII"));
+        System.out.println(str);
 
     }
 
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        byte[] buffer = new byte[4096];
-        int k;
-        StringBuffer sb = new StringBuffer();
-        while((k=inputStream.read()) != -1)
-        {
-            out.write(buffer, 0, k);
+        Reader reader = new InputStreamReader(inputStream, charset);
+        StringWriter r = new StringWriter();
+        int b;
+        while ((b = reader.read()) != -1) {
+            r.write(b);
         }
-        return new String(out.toByteArray(), charset);
+        String res= r.toString();
+        return res;
     }
 }
