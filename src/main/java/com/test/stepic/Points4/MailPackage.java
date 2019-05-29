@@ -1,6 +1,6 @@
 package com.test.stepic.Points4;
 
-public static class MailPackage extends AbstractSendable {
+public  class MailPackage extends AbstractSendable {
     private final Package content;
 
     public MailPackage(String from, String to, Package content) {

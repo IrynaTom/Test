@@ -1,6 +1,6 @@
 package com.test.stepic.Points4;
 
-public static class RealMailService implements MailService {
+public  class RealMailService implements MailService {
 
     @Override
     public Sendable processMail(Sendable mail) {

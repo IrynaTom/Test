@@ -1,6 +1,6 @@
 package com.test.stepic.Points4;
 
-public static class MailMessage extends AbstractSendable {
+public  class MailMessage extends AbstractSendable {
 
     private final String message;
 

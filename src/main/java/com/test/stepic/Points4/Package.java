@@ -1,7 +1,7 @@
 package com.test.stepic.Points4;
 
-public static class Package {
-    private final String content;
+public  class Package {
+     private final String content;
     private final int price;
 
     public Package(String content, int price) {
@@ -17,7 +17,7 @@ public static class Package {
         return price;
     }
 
-    @Override
+   @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

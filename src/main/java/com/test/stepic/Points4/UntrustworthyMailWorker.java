@@ -1,5 +1,7 @@
 package com.test.stepic.Points4;
 
+import java.util.Collection;
+
 public  class UntrustworthyMailWorker implements MailService {
 
 
