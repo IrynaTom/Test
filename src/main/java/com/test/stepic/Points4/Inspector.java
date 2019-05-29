@@ -15,10 +15,19 @@ public class Inspector implements MailService {
                     || mailPackage.getContent().getContent().equals(BANNED_SUBSTANCE)) {
                 throw new IllegalPackageException();
             }
-            if(mailPackage.getContent().getContent().contains("stones"){
+            if(mailPackage.getContent().getContent().contains("stones")){
                 throw new StolenPackageException();
             }
         }
         return mail;
+    }
+
+
+    public static class StolenPackageException extends java.lang.RuntimeException {
+
+    }
+
+    public static class IllegalPackageException extends java.lang.RuntimeException {
+
     }
 }
