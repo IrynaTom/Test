@@ -1,7 +1,7 @@
 package com.test.stepic.Collect;
 
 
-import java.io.IOException;
+/*import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -17,7 +17,7 @@ public class Collect2 {
 
         ArrayList<String> collection = new ArrayList<>();
 
-
+        collection.t
         List list = Arrays.asList(str.split("\\s"));
         Iterator<String> it = list.iterator();
         int idx = 0;
@@ -45,6 +45,6 @@ public class Collect2 {
         }
         return s.toString();
     }
-    }
+    }*/
 
 
