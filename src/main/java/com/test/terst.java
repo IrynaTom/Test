@@ -7,8 +7,12 @@ public class terst {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int count = 0;
-        if (n < 10000 && k < 10000) {
-            count = (k % n);
+
+        if (0 <= n && n<= 10000 && n > 10) {
+        count= (n%100)/10;
+        }
+        else {
+            count=0;
         }
         System.out.println(count);
     }
