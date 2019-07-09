@@ -10,13 +10,16 @@ public class Sort_out {
 
             for (int i = 0; i < mas1.length; i++) {
 
-                        System.out.println(mas1[i]+mas1[i]+mas1[i]);
-                        System.out.println(mas1[i+1]+mas2[i]+mas3[i]);
-                      //  System.out.println(mas1[i+2]+mas2[i]+mas3[i]);
-                       // System.out.println(mas1[i]+mas2[i+1]+mas3[i]);
-              //  System.out.println(mas1[i]+mas2[i+2]+mas3[i]);
-             //   System.out.println(mas1[i]+mas2[i]+mas3[i+1]);
-                //System.out.println(mas1[i]+mas2[i+1]+mas3[i+2]);
+                for (int j = 0; j < mas2.length; j++) {
+
+
+                    for (int z = 0; z < mas3.length; z++) {
+
+                        System.out.println(mas1[i]+mas1[j]+mas1[z]);
+
+                    }
+
+                }
 
         }
     }
