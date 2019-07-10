@@ -2,22 +2,22 @@ package com.test.stepFP;
 
 public class Parentheses {
     public static void main(String[] args) {
-        String s = "()()";
-        correct_pare(s);
+        String s = "()()((";
+        System.out.println(correct_pare(s));
     }
 
-    static  boolean  correct_pare(String s){
-               int bal=0;
-        for(int i=0; i< s.length();i++){
-            if(s.charAt(i) == '(') {
+    static boolean correct_pare(String s) {
+        int bal = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
                 bal++;
+            } else {
+                bal--;
             }
-            else {bal--;}
-            if(bal<0){
-               return false;
+            if (bal < 0) {
+                return false;
             }
-
         }
-        return true;
+        return bal==0;
     }
 }
