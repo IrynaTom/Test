@@ -11,14 +11,16 @@ public class Parentheses {
 
 
     public static void main(String[] args) throws IOException {
-        String s = "()()((";
-       // System.out.println(correct_pare(s));
-
+       // String s = "()()((";
+       // System.out.println(correct_parentheses(s));
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        n = Integer.parseInt(in.readLine());
+        array = new int[2*n];
         rec(0, 0);
 
     }
-
-    static boolean correct_pare(String s) {
+    //True/False String correct Parentheses
+    static boolean correct_parentheses(String s) {
         int bal = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
@@ -32,10 +34,17 @@ public class Parentheses {
         }
         return bal==0;
     }
+    //Count Parentheses
     static void rec(int idx, int bal){
-        if(idx==2*n){
-            if (bal==0){
-                System.out.println();
+        if(idx==2*n) {
+                if (bal == 0) {
+                    for (int i = 0; i <= array.length; i++) {
+                    System.out.println(array[i]);
+                    return;
+                }
+            }
+            for (int i = 0; i <= array.length; i++) {
+                System.out.println(array[i]);
                 return;
             }
         }
