@@ -1,6 +1,6 @@
 package com.test.stepFP;
 
-public class exchange {
+public class exchange{
     public static void main(String[] args) {
         int[] array = new int[4];
         array[0] = 10;
