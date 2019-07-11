@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Parentheses {
 
-    static int[] array;
+    static char [] array;
     static int n;
 
 
@@ -15,12 +15,12 @@ public class Parentheses {
        // System.out.println(correct_parentheses(s));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(in.readLine());
-        array = new int[2*n];
+        array = new char [2*n];
         rec(0, 0);
 
     }
     //True/False String correct Parentheses
-    static boolean correct_parentheses(String s) {
+   static boolean correct_parentheses(String s) {
         int bal = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
@@ -36,25 +36,27 @@ public class Parentheses {
     }
     //Count Parentheses
     static void rec(int idx, int bal){
+
         if(idx==2*n) {
                 if (bal == 0) {
                     for (int i = 0; i <= array.length; i++) {
-                    System.out.println(array[i]);
-                    return;
+                    System.out.println(array[idx] + " + ");
+                        return;
                 }
             }
             for (int i = 0; i <= array.length; i++) {
-                System.out.println(array[i]);
+                System.out.println(array[idx-1]);
                 return;
             }
+
         }
-       else{ array[idx]= '(';
-        rec(idx+1, bal+1); }
+        array[idx]= '(';
+        rec(idx+1, bal+1);
         if(bal==0){
             return;
         }
-       else { array[idx]= ')';
+        array[idx]= ')';
         rec(idx+1, bal-1);
-       }
+
     }
 }
